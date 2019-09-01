@@ -331,6 +331,41 @@ class Ui_MainWindow(object):
             self.inp3.setText(str((dec_to(summ,2))+"  "+(dec_to(minus,2))+"  "+(dec_to(multiply,2))+"  "+(dec_to(int(div),2))+"  "+(dec_to(int(porcent),2))+"  "))
             values=values+(str((dec_to(summ,2))+"  "+(dec_to(minus,2))+"  "+(dec_to(multiply,2))+"  "+(dec_to(int(div),2))+"  "+(dec_to(int(porcent),2))+"  "))
             self.textEdit.setText(values)
+    def toHexa(self,MainWindow):
+        values=self.textEdit.toPlainText()
+        inpu=self.inp.toPlainText()
+        inpu2=self.inp2.toPlainText()
+        if(inpu.isdigit() and inpu2==""):
+            self.inp3.setText(str(hex(int(inpu))))
+            values=values+(str(hex(int(inpu))))+"\n"
+            self.textEdit.setText(values)
+        elif(inpu2.isdigit() and inpu==""):
+            self.inp3.setText(str(hex(int(inpu2))))
+            values=values+(str(hex(int(inpu2))))+"\n"
+            self.textEdit.setText(values)
+        elif(inpu.isdigit() and inpu2.isdigit()):
+            num1=int(inpu)
+            num2=int(inpu2)
+            summ=num1+num2
+            minus=num1-num2
+            multiply=num1*num2
+            div=num1/num2
+            porcent=(num1*num2)/100
+            self.inp3.setText(str((hex(summ))+"  "+(hex(minus))+"  "+(hex(multiply))+"  "+(hex(int(div)))+"  "+(hex(int(porcent)))+"  "))
+            values=values+(str((hex(summ))+"  "+(hex(minus))+"  "+(hex(multiply))+"  "+(hex(int(div)))+"  "+(hex(int(porcent)))+"  "))
+            self.textEdit.setText(values)
+    def toDec(self,MainWindow):
+        values=self.textEdit.toPlainText()
+        inpu=self.inp.toPlainText()
+        inpu2=self.inp2.toPlainText()
+        if(inpu.isdigit() and inpu2==""):
+            self.inp3.setText(str(int(str(inpu),2)))
+            values=values+(str(int(str(inpu),2)))+"\n"
+            self.textEdit.setText(values)
+        elif(inpu2.isdigit() and inpu==""):
+            self.inp3.setText(str(int(str(inpu2),16)))
+            values=values+(str(int(str(inpu2),16)))+"\n"
+            self.textEdit.setText(values)
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(424, 300)
@@ -437,6 +472,7 @@ class Ui_MainWindow(object):
         self.hexadecimal.setStyleSheet("background-color:#434346;\n"
 "color:#e4e4e5;")
         self.hexadecimal.setObjectName("hexadecimal")
+        self.hexadecimal.clicked.connect(self.toHexa)
         self.decimal = QtWidgets.QPushButton(self.centralwidget)
         self.decimal.setGeometry(QtCore.QRect(240, 160, 121, 51))
         font = QtGui.QFont()
@@ -446,6 +482,7 @@ class Ui_MainWindow(object):
         self.decimal.setStyleSheet("background-color:#434346;\n"
 "color:#e4e4e5;")
         self.decimal.setObjectName("decimal")
+        self.decimal.clicked.connect(self.toDec)
         self.help = QtWidgets.QPushButton(self.centralwidget)
         self.help.setGeometry(QtCore.QRect(240, 210, 121, 51))
         font = QtGui.QFont()
