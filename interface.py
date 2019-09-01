@@ -13,14 +13,228 @@ class Ui_MainWindow(object):
         values=self.textEdit.toPlainText()
         inpu=self.inp.toPlainText()
         inpu2=self.inp2.toPlainText()
-        if(((inpu.isdigit())==True) and ((inpu2.isdigit())==True)):
+        if((inpu.isdigit()) and (inpu2=="")):
+            self.inp3.setText(inpu)
+            values=values+(inpu)+"\n"
+            self.textEdit.setText(values)
+        elif((inpu2.isdigit()) and (inpu=="")):
+            self.inp3.setText(inpu2)
+            values=values+(inpu2)+"\n"
+            self.textEdit.setText(values)
+        elif(((inpu.isdigit())==True) and ((inpu2.isdigit())==True)):
             self.inp3.setText(str(int(inpu)+int(inpu2)))
             values=values+(str(int(inpu)+int(inpu2)))+"\n"
             self.textEdit.setText(values)
         elif((inpu=="") and (inpu2=="")):
             self.inp3.setText("Empty")
-        else:
+        elif(((inpu.isdigit())==False) and ((inpu2.isdigit())==False)):
+            def vali(inpu, inpu2):
+                try:
+                    float(inpu)
+                    try:
+                        float(inpu2)
+                        return True
+                    except:
+                        return False
+                except:
+                    return False
+            R=vali(inpu, inpu2)
+            if(R==True):
+                self.inp3.setText(str(float(inpu)+float(inpu2)))
+                values=values+(str(float(inpu)+float(inpu2)))+"\n"
+                self.textEdit.setText(values)
+        elif(((inpu.isdigit())==False) and (inpu2!="")):
+            def vali(inpu):
+                try:
+                    float(inpu)
+                    return True
+                except:
+                    return False
+            R=vali(inpu)
+            if((R==True) and (inpu2.isdigit())):
+                self.inp3.setText(str(float(inpu)+int(inpu2)))
+                values=values+(str(float(inpu)+int(inpu2)))+"\n"
+                self.textEdit.setText(values)
+        elif(((inpu2.isdigit())==False) and (inpu!="")):
+            def vali(inpu2):
+                try:
+                    float(inpu2)
+                    return True
+                except:
+                    return False
+            R=vali(inpu2)
+            if((R==True) and (inpu.isdigit())):
+                self.inp3.setText(str(float(inpu2)+int(inpu)))
+                values=values+(str(float(inpu2)+int(inpu)))+"\n"
+                self.textEdit.setText(values)
+    def toMin(self, MainWindow):
+        values=self.textEdit.toPlainText()
+        inpu=self.inp.toPlainText()
+        inpu2=self.inp2.toPlainText()
+        if((inpu.isdigit()) and (inpu2=="")):
+            self.inp3.setText(inpu)
+            values=values+(inpu)+"\n"
+            self.textEdit.setText(values)
+        elif((inpu2.isdigit()) and (inpu=="")):
+            self.inp3.setText("-"+inpu2)
+            values=values+(inpu2)+"\n"
+            self.textEdit.setText(values)
+        elif(((inpu.isdigit())==True) and ((inpu2.isdigit())==True)):
+            self.inp3.setText(str(int(inpu)-int(inpu2)))
+            values=values+(str(int(inpu)-int(inpu2)))+"\n"
+            self.textEdit.setText(values)
+        elif((inpu=="") and (inpu2=="")):
+            self.inp3.setText("Empty")
+        elif(((inpu.isdigit())==False) and ((inpu2.isdigit())==False)):
+            def vali(inpu, inpu2):
+                try:
+                    float(inpu)
+                    try:
+                        float(inpu2)
+                        return True
+                    except:
+                        return False
+                except:
+                    return False
+            R=vali(inpu, inpu2)
+            if(R==True):
+                self.inp3.setText(str(float(inpu)-float(inpu2)))
+                values=values+(str(float(inpu)-float(inpu2)))+"\n"
+                self.textEdit.setText(values)
+        elif(((inpu.isdigit())==False) and (inpu2!="")):
+            def vali(inpu):
+                try:
+                    float(inpu)
+                    return True
+                except:
+                    return False
+            R=vali(inpu)
+            if((R==True) and (inpu2.isdigit())):
+                self.inp3.setText(str(float(inpu)-int(inpu2)))
+                values=values+(str(float(inpu)-int(inpu2)))+"\n"
+                self.textEdit.setText(values)
+        elif(((inpu2.isdigit())==False) and (inpu!="")):
+            def vali(inpu2):
+                try:
+                    float(inpu2)
+                    return True
+                except:
+                    return False
+            R=vali(inpu2)
+            if((R==True) and (inpu.isdigit())):
+                self.inp3.setText(str(float(inpu2)-int(inpu)))
+                values=values+(str(float(inpu2)-int(inpu)))+"\n"
+                self.textEdit.setText(values)
+    def toMultiply(self, MainWindow):
+        values=self.textEdit.toPlainText()
+        inpu=self.inp.toPlainText()
+        inpu2=self.inp2.toPlainText()
+        if((inpu.isdigit()) and (inpu2=="")):
+            self.inp3.setText("0")
+            values=values+("0")+"\n"
+            self.textEdit.setText(values)
+        elif((inpu2.isdigit()) and (inpu=="")):
+            self.inp3.setText("0")
+            values=values+("0")+"\n"
+            self.textEdit.setText(values)
+        elif(((inpu.isdigit())==True) and ((inpu2.isdigit())==True)):
+            self.inp3.setText(str(int(inpu)*int(inpu2)))
+            values=values+(str(int(inpu)*int(inpu2)))+"\n"
+            self.textEdit.setText(values)
+        elif((inpu=="") and (inpu2=="")):
+            self.inp3.setText("Empty")
+        elif(((inpu.isdigit())==False) and ((inpu2.isdigit())==False)):
+            def vali(inpu, inpu2):
+                try:
+                    float(inpu)
+                    try:
+                        float(inpu2)
+                        return True
+                    except:
+                        return False
+                except:
+                    return False
+            R=vali(inpu, inpu2)
+            if(R==True):
+                self.inp3.setText(str(float(inpu)*float(inpu2)))
+                values=values+(str(float(inpu)*float(inpu2)))+"\n"
+                self.textEdit.setText(values)
+        elif(((inpu.isdigit())==False) and (inpu2!="")):
+            def vali(inpu):
+                try:
+                    float(inpu)
+                    return True
+                except:
+                    return False
+            R=vali(inpu)
+            if((R==True) and (inpu2.isdigit())):
+                self.inp3.setText(str(float(inpu)*int(inpu2)))
+                values=values+(str(float(inpu)*int(inpu2)))+"\n"
+                self.textEdit.setText(values)
+        elif(((inpu2.isdigit())==False) and (inpu!="")):
+            def vali(inpu2):
+                try:
+                    float(inpu2)
+                    return True
+                except:
+                    return False
+            R=vali(inpu2)
+            if((R==True) and (inpu.isdigit())):
+                self.inp3.setText(str(float(inpu2)*int(inpu)))
+                values=values+(str(float(inpu2)*int(inpu)))+"\n"
+                self.textEdit.setText(values)
+    def toDiv(self, MainWindow):
+        values=self.textEdit.toPlainText()
+        inpu=self.inp.toPlainText()
+        inpu2=self.inp2.toPlainText()
+        if(inpu=="0" or inpu2=="0"):
             self.inp3.setText("Error 404")
+        elif(((inpu.isdigit())==True) and ((inpu2.isdigit())==True)):
+            self.inp3.setText(str(int(inpu)/int(inpu2)))
+            values=values+(str(int(inpu)/int(inpu2)))+"\n"
+            self.textEdit.setText(values)
+        elif((inpu=="") and (inpu2=="")):
+            self.inp3.setText("Empty")
+        elif(((inpu.isdigit())==False) and ((inpu2.isdigit())==False)):
+            def vali(inpu, inpu2):
+                try:
+                    float(inpu)
+                    try:
+                        float(inpu2)
+                        return True
+                    except:
+                        return False
+                except:
+                    return False
+            R=vali(inpu, inpu2)
+            if(R==True):
+                self.inp3.setText(str(float(inpu)/float(inpu2)))
+                values=values+(str(float(inpu)/float(inpu2)))+"\n"
+                self.textEdit.setText(values)
+        elif(((inpu.isdigit())==False) and (inpu2!="")):
+            def vali(inpu):
+                try:
+                    float(inpu)
+                    return True
+                except:
+                    return False
+            R=vali(inpu)
+            if((R==True) and (inpu2.isdigit())):
+                self.inp3.setText(str(float(inpu)/int(inpu2)))
+                values=values+(str(float(inpu)/int(inpu2)))+"\n"
+                self.textEdit.setText(values)
+        elif(((inpu2.isdigit())==False) and (inpu!="")):
+            def vali(inpu2):
+                try:
+                    float(inpu2)
+                    return True
+                except:
+                    return False
+            R=vali(inpu2)
+            if((R==True) and (inpu.isdigit())):
+                self.inp3.setText(str(float(inpu2)/int(inpu)))
+                values=values+(str(float(inpu2)/int(inpu)))+"\n"
+                self.textEdit.setText(values)
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(424, 300)
@@ -55,6 +269,7 @@ class Ui_MainWindow(object):
         self.minus.setStyleSheet("background-color:#ff9f0a;\n"
 "color:#e4e4e5;")
         self.minus.setObjectName("minus")
+        self.minus.clicked.connect(self.toMin)
         self.multiply = QtWidgets.QPushButton(self.centralwidget)
         self.multiply.setGeometry(QtCore.QRect(360, 60, 51, 51))
         font = QtGui.QFont()
@@ -64,6 +279,7 @@ class Ui_MainWindow(object):
         self.multiply.setStyleSheet("background-color:#ff9f0a;\n"
 "color:#e4e4e5;")
         self.multiply.setObjectName("multiply")
+        self.multiply.clicked.connect(self.toMultiply)
         self.inp = QtWidgets.QTextEdit(self.centralwidget)
         self.inp.setEnabled(True)
         self.inp.setGeometry(QtCore.QRect(10, 20, 101, 51))
@@ -84,6 +300,7 @@ class Ui_MainWindow(object):
         self.div.setStyleSheet("background-color:#ff9f0a;\n"
 "color:#e4e4e5;")
         self.div.setObjectName("div")
+        self.div.clicked.connect(self.toDiv)
         self.porcent = QtWidgets.QPushButton(self.centralwidget)
         self.porcent.setGeometry(QtCore.QRect(310, 10, 51, 51))
         font = QtGui.QFont()
