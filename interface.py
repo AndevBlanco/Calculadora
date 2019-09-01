@@ -235,6 +235,102 @@ class Ui_MainWindow(object):
                 self.inp3.setText(str(float(inpu2)/int(inpu)))
                 values=values+(str(float(inpu2)/int(inpu)))+"\n"
                 self.textEdit.setText(values)
+    def toPorcent(self, MainWindow):
+        values=self.textEdit.toPlainText()
+        inpu=self.inp.toPlainText()
+        inpu2=self.inp2.toPlainText()
+        if((inpu.isdigit()) and (inpu2=="")):
+            self.inp3.setText("0")
+            values=values+("0")+"\n"
+            self.textEdit.setText(values)
+        elif((inpu2.isdigit()) and (inpu=="")):
+            self.inp3.setText("0")
+            values=values+("0")+"\n"
+            self.textEdit.setText(values)
+        elif(((inpu.isdigit())==True) and ((inpu2.isdigit())==True)):
+            self.inp3.setText(str(((int(inpu)*int(inpu2))/100)))
+            values=values+(str(((int(inpu)*int(inpu2))/100)))+"\n"
+            self.textEdit.setText(values)
+        elif((inpu=="") and (inpu2=="")):
+            self.inp3.setText("Empty")
+        elif(((inpu.isdigit())==False) and ((inpu2.isdigit())==False)):
+            def vali(inpu, inpu2):
+                try:
+                    float(inpu)
+                    try:
+                        float(inpu2)
+                        return True
+                    except:
+                        return False
+                except:
+                    return False
+            R=vali(inpu, inpu2)
+            if(R==True):
+                self.inp3.setText(str(((float(inpu)*float(inpu2))/100)))
+                values=values+(str(((float(inpu)*float(inpu2))/100)))+"\n"
+                self.textEdit.setText(values)
+        elif(((inpu.isdigit())==False) and (inpu2!="")):
+            def vali(inpu):
+                try:
+                    float(inpu)
+                    return True
+                except:
+                    return False
+            R=vali(inpu)
+            if((R==True) and (inpu2.isdigit())):
+                self.inp3.setText(str(((float(inpu)*int(inpu2))/100)))
+                values=values+(str(((float(inpu)*int(inpu2))/100)))+"\n"
+                self.textEdit.setText(values)
+        elif(((inpu2.isdigit())==False) and (inpu!="")):
+            def vali(inpu2):
+                try:
+                    float(inpu2)
+                    return True
+                except:
+                    return False
+            R=vali(inpu2)
+            if((R==True) and (inpu.isdigit())):
+                self.inp3.setText(str(((float(inpu2)*int(inpu1))/100)))
+                values=values+(str(((float(inpu2)*int(inpu1))/100)))+"\n"
+                self.textEdit.setText(values)
+    def toClear(self, MainWindow):
+        self.inp.setText("")
+        self.inp2.setText("")
+        self.inp3.setText("")
+    def toEqual(self, MainWindow):
+        self.inp3.setText("Hi best teacher in the world")
+    def toBinary(self,MainWindow):
+        def dec_to(num, sistema):
+            valores_hexa = {10:'A', 11:'B', 12:'C', 13:'D', 14:'E', 15:'F'}
+            if (sistema > 1 and sistema < 17):
+                valor_ret = []
+                while num:
+                    num, residuo = divmod(num, sistema)
+                    valor_ret.append(valores_hexa[residuo]) if (residuo > 9) else valor_ret.append(str(residuo))
+                return ''.join(valor_ret[::-1])
+            return 'Verifica que el sistema al que deseas convertir sea válido'
+        values=self.textEdit.toPlainText()
+        inpu=self.inp.toPlainText()
+        inpu2=self.inp2.toPlainText()
+        if(inpu.isdigit() and inpu2==""):
+            self.inp3.setText(str(dec_to(int(inpu), 2)))
+            values=values+(str(dec_to(int(inpu), 2)))+"\n"
+            self.textEdit.setText(values)
+        elif(inpu2.isdigit() and inpu==""):
+            self.inp3.setText(str(dec_to(int(inpu2), 2)))
+            values=values+(str(dec_to(int(inpu2), 2)))+"\n"
+            self.textEdit.setText(values)
+        elif(inpu.isdigit() and inpu2.isdigit()):
+            num1=int(inpu)
+            num2=int(inpu2)
+            summ=num1+num2
+            minus=num1-num2
+            multiply=num1*num2
+            div=num1/num2
+            porcent=(num1*num2)/100
+            self.inp3.setText(str((dec_to(summ,2))+"  "+(dec_to(minus,2))+"  "+(dec_to(multiply,2))+"  "+(dec_to(int(div),2))+"  "+(dec_to(int(porcent),2))+"  "))
+            values=values+(str((dec_to(summ,2))+"  "+(dec_to(minus,2))+"  "+(dec_to(multiply,2))+"  "+(dec_to(int(div),2))+"  "+(dec_to(int(porcent),2))+"  "))
+            self.textEdit.setText(values)
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(424, 300)
@@ -250,6 +346,7 @@ class Ui_MainWindow(object):
         self.equal.setStyleSheet("background-color:#ff9f0a;\n"
 "color:#e4e4e5;")
         self.equal.setObjectName("equal")
+        self.equal.clicked.connect(self.toEqual)
         self.add = QtWidgets.QPushButton(self.centralwidget)
         self.add.setGeometry(QtCore.QRect(360, 160, 51, 51))
         font = QtGui.QFont()
@@ -310,6 +407,7 @@ class Ui_MainWindow(object):
         self.porcent.setStyleSheet("background-color:#434346;\n"
 "color:#e4e4e5;")
         self.porcent.setObjectName("porcent")
+        self.porcent.clicked.connect(self.toPorcent)
         self.clearall = QtWidgets.QPushButton(self.centralwidget)
         self.clearall.setGeometry(QtCore.QRect(240, 10, 71, 51))
         font = QtGui.QFont()
@@ -319,6 +417,7 @@ class Ui_MainWindow(object):
         self.clearall.setStyleSheet("background-color:#434346;\n"
 "color:#e4e4e5;")
         self.clearall.setObjectName("clearall")
+        self.clearall.clicked.connect(self.toClear)
         self.binary = QtWidgets.QPushButton(self.centralwidget)
         self.binary.setGeometry(QtCore.QRect(240, 60, 121, 51))
         font = QtGui.QFont()
@@ -328,6 +427,7 @@ class Ui_MainWindow(object):
         self.binary.setStyleSheet("background-color:#434346;\n"
 "color:#e4e4e5;")
         self.binary.setObjectName("binary")
+        self.binary.clicked.connect(self.toBinary)
         self.hexadecimal = QtWidgets.QPushButton(self.centralwidget)
         self.hexadecimal.setGeometry(QtCore.QRect(240, 110, 121, 51))
         font = QtGui.QFont()
