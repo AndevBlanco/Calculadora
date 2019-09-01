@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>341</width>
-    <height>339</height>
+    <width>424</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,8 +20,8 @@
    <widget class="QPushButton" name="equal">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>260</y>
+      <x>360</x>
+      <y>210</y>
       <width>51</width>
       <height>51</height>
      </rect>
@@ -42,239 +42,11 @@ color:#e4e4e5;</string>
      <string>=</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="one">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>110</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#666768;
-color:#e4e4e5;
-
-</string>
-    </property>
-    <property name="text">
-     <string>1</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="two">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>110</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#666768;
-color:#e4e4e5;</string>
-    </property>
-    <property name="text">
-     <string>2</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="three">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>110</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#666768;
-color:#e4e4e5;</string>
-    </property>
-    <property name="text">
-     <string>3</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="four">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>160</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#666768;
-color:#e4e4e5;</string>
-    </property>
-    <property name="text">
-     <string>4</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="five">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>160</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#666768;
-color:#e4e4e5;</string>
-    </property>
-    <property name="text">
-     <string>5</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="six">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>160</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#666768;
-color:#e4e4e5;</string>
-    </property>
-    <property name="text">
-     <string>6</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="seven">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>210</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#666768;
-color:#e4e4e5;</string>
-    </property>
-    <property name="text">
-     <string>7</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="eight">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>210</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#666768;
-color:#e4e4e5;
-</string>
-    </property>
-    <property name="text">
-     <string>8</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="nine">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>210</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#666768;
-color:#e4e4e5;</string>
-    </property>
-    <property name="text">
-     <string>9</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="add">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>210</y>
+      <x>360</x>
+      <y>160</y>
       <width>51</width>
       <height>51</height>
      </rect>
@@ -298,8 +70,8 @@ color:#e4e4e5;</string>
    <widget class="QPushButton" name="minus">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>160</y>
+      <x>360</x>
+      <y>110</y>
       <width>51</width>
       <height>51</height>
      </rect>
@@ -323,8 +95,8 @@ color:#e4e4e5;</string>
    <widget class="QPushButton" name="multiply">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>110</y>
+      <x>360</x>
+      <y>60</y>
       <width>51</width>
       <height>51</height>
      </rect>
@@ -345,79 +117,31 @@ color:#e4e4e5;</string>
      <string>x</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="coma">
+   <widget class="QTextEdit" name="inp">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>260</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#666768;
-color:#e4e4e5;</string>
-    </property>
-    <property name="text">
-     <string>,</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="zero">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>260</y>
+      <x>10</x>
+      <y>20</y>
       <width>101</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#666768;
-color:#e4e4e5;</string>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="input">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>321</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>20</pointsize>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="layoutDirection">
      <enum>Qt::RightToLeft</enum>
     </property>
     <property name="styleSheet">
-     <string notr="true">border:none;
-color:#e4e4e5;</string>
+     <string notr="true">color:#e4e4e5;</string>
     </property>
     <property name="readOnly">
-     <bool>true</bool>
+     <bool>false</bool>
     </property>
     <property name="overwriteMode">
      <bool>false</bool>
@@ -426,8 +150,8 @@ color:#e4e4e5;</string>
    <widget class="QPushButton" name="div">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>60</y>
+      <x>360</x>
+      <y>10</y>
       <width>51</width>
       <height>51</height>
      </rect>
@@ -451,8 +175,8 @@ color:#e4e4e5;</string>
    <widget class="QPushButton" name="porcent">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>60</y>
+      <x>310</x>
+      <y>10</y>
       <width>51</width>
       <height>51</height>
      </rect>
@@ -476,9 +200,9 @@ color:#e4e4e5;</string>
    <widget class="QPushButton" name="clearall">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>60</y>
-      <width>51</width>
+      <x>240</x>
+      <y>10</y>
+      <width>71</width>
       <height>51</height>
      </rect>
     </property>
@@ -498,38 +222,13 @@ color:#e4e4e5;</string>
      <string>A/C</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="clear">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>60</y>
-      <width>51</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#434346;
-color:#e4e4e5;</string>
-    </property>
-    <property name="text">
-     <string>C</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="binary">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>240</x>
       <y>60</y>
       <width>121</width>
-      <height>91</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -551,10 +250,10 @@ color:#e4e4e5;</string>
    <widget class="QPushButton" name="hexadecimal">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>150</y>
+      <x>240</x>
+      <y>110</y>
       <width>121</width>
-      <height>81</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -576,10 +275,10 @@ color:#e4e4e5;</string>
    <widget class="QPushButton" name="decimal">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>230</y>
+      <x>240</x>
+      <y>160</y>
       <width>121</width>
-      <height>81</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
@@ -598,13 +297,126 @@ color:#e4e4e5;</string>
      <string>Decimal</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="help">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>210</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#434346;
+color:#e4e4e5;</string>
+    </property>
+    <property name="text">
+     <string>Help</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="inp2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#e4e4e5;</string>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="overwriteMode">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QDateTimeEdit" name="time">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>194</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>211</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#e4e4e5;</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="inp3">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>20</y>
+      <width>101</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:#e4e4e5;</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="overwriteMode">
+     <bool>false</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>341</width>
+     <width>424</width>
      <height>21</height>
     </rect>
    </property>
